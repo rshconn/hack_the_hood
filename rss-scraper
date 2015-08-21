@@ -75,10 +75,14 @@ while $i < $num
 	### parse skills###
 	$temp = get_text_between($contentString, "skills required", '<', "no skills listed")
 	puts("Skills: " + $temp)
-	
-	### parse company###
+
+	### parse company name###
 	$temp = get_text_between($contentString, "company", '<', "no company listed")
-	puts("Company: " + $temp)
+	puts("Company Name: " + $temp)
+
+	### parse company website ###
+	$temp = get_text_between($contentString, "www.", '<', "no website listed")
+	puts("Company website: " + $temp)
 	
 	$i += 1
 	puts("")
