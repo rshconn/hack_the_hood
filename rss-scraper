@@ -76,6 +76,10 @@ while $i < $num
 	$temp = get_text_between($contentString, "skills required", '<', "no skills listed")
 	puts("Skills: " + $temp)
 	
+	### parse company###
+	$temp = get_text_between($contentString, "company", '<', "no company listed")
+	puts("Company: " + $temp)
+	
 	$i += 1
 	puts("")
 	puts("")
